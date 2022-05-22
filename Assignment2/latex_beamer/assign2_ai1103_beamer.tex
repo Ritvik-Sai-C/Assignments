@@ -1,0 +1,71 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\setbeamertemplate{caption}[numbered]{}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption}
+
+\title{AI1110 \\ Assignment 2}
+\author{Ritvik Sai C \\ CS21BTECH11054}
+\date{}
+\begin{document}
+	% The title page
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	% The table of contents
+	\begin{frame}{Outline}
+    		\tableofcontents
+	\end{frame}
+	
+	% The question
+	\section{Question}
+	\begin{frame}{Question 19.c}
+	\
+
+The average cost function associated with producing and marketing x units of an item is given by AC $ = 2x - 11 + \frac{50}{x}$. Find the range of values of the output x, for which AC is increasing.\\
+
+\end{frame}
+
+% The solution
+	\section{Solution}
+	\begin{frame}{Solution}
+	
+	The average cost function associated with producing and marketing x units of an item is
+ given as:\\
+ AC $ =2x - 11 + \frac{50}{x}$\\
+Output for which AC increases is: $\frac{d(AC)}{d(x)} > 0$ \\
+\implies $$ \frac{d}{dx} (2x - 11 + \frac{50}{x}) > 0 $$ \\ 
+\implies $ (x^2 - 25) > 0$ \\
+\implies (x-5)(x+5) > 0 \\
+\implies $$x > 5$ as $(x > 0)$$ \\
+\therefore  $ The average cost increases  when output $x > 5.$$ \\
+
+\end{frame}
+
+% The answer
+	\section{Answer}
+	\begin{frame}{Answer}
+	In the range of $ x \in (5,\infty)$ , the average cost function increases.
+	
+\end{frame}
+
+\end{document}\textsl{•}
