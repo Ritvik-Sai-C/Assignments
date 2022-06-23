@@ -1,0 +1,78 @@
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{Madrid}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{graphicx}
+
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+    \usepackage{amsmath}
+\def\inputGnumericTable{}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+
+% Title page details: 
+\title{Assignment 5} 
+\author{Ritvik Sai C - CS21BTECH11054}
+\date{\today}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+
+  Find the probability $P_s $ that in a men's tennis tournament the final match will last five sets.\\
+(a) Assume that the probability p that a player wins a set equals 0.5.\\ 
+(b) Use bayesian statistic with uniform prior (see law of succession).\\ 
+
+\end{frame}
+
+% Blocks frame
+\section{Solution}
+\begin{frame}[allowframebreaks]{Solution}
+ 
+\item (a) Suppose that the probability P(A) that player A wins a set equals p=1-q. He wins the match in five sets if he wins two of the first four sets and the fifth set. Hence, the probability $ P_5(A)$ that he wins in five equals $ 6p^3q^2$. Similarly, the probability $p_5(B)$ that player B wins in five equals $ 6p^2q^3$.Hence,\\ 
+              $p_5= p_5(A) + p_5(B) =6p^3q^2 +6p^2q^3 = 6p^2q^2$\\
+is the probability that the match last five sets. \\
+If p=q=1/2, then  p_5=3/8\\
+\end{frame}
+
+
+\begin{frame}{Solution}
+\begin{align}
+    
+
+(b) Suppose now that $P(A) = \widetilde {p}$ is an RV with density f(p).In this case,\\
+ $\widetilde {p_5}=6\widetilde {p^2}(1-\widetilde {p^2})$
+is an RV. We wish to find its best bayesian estimate . Using the MS criterion, we obtain \\
+$\hat {p_5}= E(p_5) = \[ \int_0^1 6p^2(1-p^2)f(p) \ dp \]$ \\
+If f(p)=1, then  $\hat {p_5}=1/5 $ \\
+
+\end{align} 
+\end{frame}
+\end{document}
